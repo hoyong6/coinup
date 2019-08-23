@@ -4,7 +4,7 @@
 
 ## Introduction - 介绍
 
-只是为了解决，前端重复手动上币的问题，而开发的一个脚本
+只是为了解决，前端重复手动上币的问题，而开发的一个脚本,限于本公司内部使用
 
 ## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
@@ -12,11 +12,11 @@
 
 ## Configuration - 配置（配置信息。）
 
-目录地址例如： /Users/heyong/Workspace_hy/Projects/CoinEgg/btc_coinbee_www
+目录地址例如： /Users/XXXX/Workspace_hy/Projects/CoinEgg/btc_coinbee_www
 
-/Users/heyong/Workspace_hy/Projects/CoinEgg/trade
+/Users/XXXXX/Workspace_hy/Projects/CoinEgg/trade
 
-目标图片地址： /Users/heyong/Desktop/testimages/coin_all_b.png
+目标图片地址： /Users/XXXX/Desktop/testimages/coin_all_b.png
 
 上述记录于 imageconfig.json
 
