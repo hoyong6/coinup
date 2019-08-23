@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 require("babel-register");
 require("babel-polyfill"); // 把babel 扔进来 暂时不是知道是否生效
 

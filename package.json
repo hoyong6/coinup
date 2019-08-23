@@ -1,11 +1,10 @@
 {
-  "name": "commander-example",
-  "version": "1.0.0",
+  "name": "runcoinup",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "bin": {
-    "commander-example": "test.js",
-    "coinup": "./bin/runimages.js"
+    "coin-cli": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
