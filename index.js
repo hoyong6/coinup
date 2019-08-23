@@ -42,7 +42,7 @@ class RunImage {
   readFunction (name) {
     let self = this
     this.coinName = name
-    fse.readJson('./imageconfig.json')
+    fse.readJson('imageconfig.json')
     .then(packageObj => {
         if(!packageObj.address || !packageObj.addressT || !packageObj.desc){ // 如果图片的配置文件有一项默认为空，需要进行初始化配置
           console.log('首次需要初始化配置')
