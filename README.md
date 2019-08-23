@@ -1,6 +1,6 @@
 # Name
 
-[Badges]
+[coin-cli]
 
 ## Introduction - 介绍
 
