@@ -29,7 +29,13 @@ npm i runcoinup
 
 coin-cli 即可进入交互
 
+coin-cli -i 进入服务器ui 模式，支持接口提交
+
 ## Development - 开发（关于怎样开发的文档信息。（API 等。））
+
+npm run build  可以执行babel 对js进行编译，发布之前可以先进行一次打包
+
+npm run watch  可以支持热更新编译
 
 参考开发 
 http://blog.gejiawen.com/2016/09/21/make-a-node-cli-program-by-commander-js/
@@ -44,5 +50,6 @@ http://nodejs.cn/api/child_process.html#child_process_spawning_bat_and_cmd_files
 http://nodejs.cn/api/process.html#process_signal_events
 
 ## Changelog - 更新日志（一个简短的历史记录（更改，替换或者其他）。）
+追加一个大的版本， ui 服务基本成型了
 
 
