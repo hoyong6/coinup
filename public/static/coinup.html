@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>上币图形界面</title>
+   <!-- Bootstrap core CSS -->
+   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/src/css/index.css">
+</head>
+<body>
+  <div class="indexBgc">
+     <div class="centerBox">
+       <form action="" id="J-coinUp" class="coinUpform bs-example bs-example-form">
+         <div class="hideOptions J-showOptions Options">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon">项目1：</span>
+                <input type="text"  class="form-control" name="address" placeholder="请输入首个项目地址（最好是www，例如 /Users/XXXX/Workspace_hy/Projects/CoinEgg/btc_coinbee_www）" aria-describedby="basic-addon1" autocomplete="new-password">
+            </div>
+         </div>
+         <div class="hideOptions J-showOptions Options">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon">项目2：</span>
+                <input type="text" class="form-control" name="addressT" placeholder="请输入第二个项目地址（最好是trade）：" aria-describedby="basic-addon1" autocomplete="new-password">
+            </div>
+         </div>
+         <div class="hideOptions J-showOptions Options">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon">图片：</span>
+                <input type="text" class="form-control" name="desc" placeholder="请输入上币图片地址（例如 /Users/XXXX/Desktop/testimages/coin_all_b.png）" aria-describedby="basic-addon1" autocomplete="new-password">
+            </div>
+         </div>
+         <div class="Options">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon">上币名称（例如 apt）：</span>
+                <input type="text" class="form-control" name="coinName" placeholder="apt" aria-describedby="basic-addon1" autocomplete="new-password">
+            </div>
+         </div>
+         <div class="Options">
+            <button type="button" id="J-coinUpBtn" class="btn btn-success">确定</button>
+            <button type="button" id="J-resetBtn" class="btn btn-warning">重置项目地址</button>
+            <span id="J-dangerBtn" class="hideOptions">
+                <button type="button" class="btn btn-danger">请等待脚本执行结束</button>
+            </span>
+         </div>
+       </form>
+     </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/static/src/js/index.js"></script>
+</body>
+</html>

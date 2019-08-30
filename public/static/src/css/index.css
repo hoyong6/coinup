@@ -1,0 +1,49 @@
+/* 初始化 */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;} 
+a{color:#2d374b;text-decoration:none} 
+a:hover{color:#cd0200;text-decoration:underline} 
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word} 
+.indexBgc{
+  background: url('../../images/bgc.jpg') no-repeat center; background-size: auto 1080px; width: 100%; height: 1080px;
+}
+.centerBox{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.coinUpform{
+  font-size: 14px;
+}
+
+
+
+.coinUpBtnLi{
+  text-align: center;
+}
+.coinUpBtn{
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #214f77;
+  border: 1px solid #214f77;
+  border-radius: 3px;
+  margin: 0 auto;
+  color: #fff;
+  cursor: pointer;
+}
+.resetBtn{
+  margin-left: 40px;
+}
+.hideOptions{
+  display: none;
+}
+.Options{
+  width: 700px;
+  margin-bottom: 20px;
+}
