@@ -12,9 +12,8 @@ const child_process = require('child_process') // node 子进程文件
 const initaddress = require('./initaddress.js')
 const events = require('events') // 引入事件模块
 const emitter = new events.EventEmitter() // 创建事件监听模块
-
-const processurl = process.cwd() // 获取当前地址
-
+const path = require('path')
+console.log('---->', path.resolve(__dirname).split('/dist')[0])
 // 读取文件函数
 class RunImage {
   constructor () {
@@ -104,7 +103,7 @@ class RunImage {
   readFunction (name) {
     const self = this
     this.coinName = name
-    fse.readJson(processurl + '/imageconfig.json')
+    fse.readJson(path.resolve(__dirname).split('/dist')[0] + '/imageconfig.json')
       .then(packageObj => {
         if (!packageObj.address || !packageObj.addressT || !packageObj.desc) { // 如果图片的配置文件有一项默认为空，需要进行初始化配置
           console.log('首次需要初始化配置')

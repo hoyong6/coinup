@@ -1,8 +1,8 @@
 /* prompt require process */
 var co = require('co');
 var prompt = require('co-prompt'); // 命令交互co 文件
-const processurl = process.cwd(); // 获取当前地址
 var fse = require('fs-extra'); // 读写文件
+const path = require('path');
 
 // 初次写入图片地址配置
 function initaddress(callback, parameter) {
@@ -23,7 +23,7 @@ function initaddress(callback, parameter) {
     obj.addressT = addressT;
     obj.desc = desc;
     try {
-      fse.writeJson(processurl + '/imageconfig.json', obj);
+      fse.writeJson(path.resolve(__dirname).split('/dist')[0] + '/imageconfig.json', obj);
       console.log('success!');
       if (typeof callback === 'function') {
         // 配置成功进一步执行下一层回调函数

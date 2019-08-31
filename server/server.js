@@ -10,13 +10,13 @@ const servestatic = require('koa-static')
 const path = require('path')
 
 const Runimage = require('./runimage.js') // 引入脚本方法
-const processurl = process.cwd() // 获取当前地址
+const processurl = process.cwd() // 获取当前包运行的环境地址
 const main = async function (ctx, next) { // 渲染主页面
   ctx.response.type = 'html'
-  ctx.response.body = await fsp.readFile(processurl + '/public/static/coinup.html', 'utf8')
+  ctx.response.body = await fsp.readFile(path.resolve(__dirname).split('/dist')[0] + '/public/static/coinup.html', 'utf8')
 }
-
-const home = servestatic(processurl + '/public/') // 静态服务器
+console.log('processurl---->', processurl)
+const home = servestatic(path.resolve(__dirname).split('/dist')[0] + '/public/') // 静态服务器
 app.use(home)
 let imageconfigData = ''
 const run = new Runimage()
@@ -30,7 +30,7 @@ class Server {
 
   // 同步先读取json数据
   readJson () {
-    fse.readJson(processurl + '/imageconfig.json')
+    fse.readJson(path.resolve(__dirname).split('/dist')[0] + '/imageconfig.json')
       .then(packageObj => {
         imageconfigData = packageObj
       })
@@ -75,7 +75,7 @@ class Server {
             return
           }
           try {
-            fse.writeJson(processurl + '/imageconfig.json', postData)
+            fse.writeJson(path.resolve(__dirname).split('/dist')[0] + '/imageconfig.json', postData)
             console.log('success!')
             ctx.body = {
               status: 0,
@@ -83,7 +83,7 @@ class Server {
               cover: 1
             }
             // 写入数据之后需要重新读取数据,在执行脚本
-            fse.readJson(processurl + '/imageconfig.json')
+            fse.readJson(path.resolve(__dirname).split('/dist')[0] + '/imageconfig.json')
               .then(packageObj => {
                 imageconfigData = packageObj
                 // 执行脚本
@@ -115,7 +115,7 @@ class Server {
       if (postData.reset === '0') {
         // 对配置文件执行重置操作
         try {
-          fse.writeJson(processurl + '/imageconfig.json', configData) // 重置一个空对象
+          fse.writeJson(path.resolve(__dirname).split('/dist')[0] + '/imageconfig.json', configData) // 重置一个空对象
           imageconfigData = '' // 本身的内存也将置空
           console.log('重置配置成功success!')
         } catch (err) {

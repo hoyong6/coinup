@@ -1,6 +1,6 @@
 {
   "name": "runcoinup",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel app -d dist",
+    "build": "babel server -d dist",
     "watch": "gulp"
   },
   "author": "",
@@ -39,6 +39,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-watch": "^5.0.1",
+    "object-assign": "^4.1.1",
     "open": "^6.4.0"
   }
 }
