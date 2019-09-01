@@ -9,6 +9,23 @@
 ## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
 模块见 package.json
+## 目录说明
+```
+
+├── README.md         # 说明文件
+├── bin               # bin启动文件（npm用，本次没有使用）
+├── dist              # 转码后的线上代码
+├── gulpfile.js       # 前端工作流入口
+├── package-lock.json # 包差异依赖
+├── package.json      # 包依赖
+├── public            # web root 目录
+├── server            # node 脚本 和 UI serve 服务所在文件
+├── babelrc           # babelrc 的配置文件
+├── gitignore         # git忽略文件
+├── eslintrc          # eslintrc.js 配置文件（代码检查）
+├── imageconfig.json  # 对输入的地址进行持久化
+
+```
 
 ## Configuration - 配置（配置信息。）
 
@@ -23,7 +40,11 @@
 
 ## Installation - 安装（如何安装。）
 
-npm i runcoinup
+npm i runcoinup -g
+
+cli  提示有open错误的话，请安装open
+
+npm install -g open   (可能需要先提交open)
 
 ## Usage - 用法（用法。）
 

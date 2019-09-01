@@ -111,7 +111,7 @@ class RunImage {
             self.readFunction(name) // 在输入初始化地址之后在读文件
           }, self.coinName)
         } else {
-          self.copyImages(packageObj, 'address')
+          self.copyImages(packageObj, 'address', self)
         }
       })
       .catch(err => {
