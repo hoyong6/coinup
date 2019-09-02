@@ -44,6 +44,8 @@ npm i runcoinup -g
 
 cli  提示有open错误的话，请安装open
 
+如果报open相关的错误请安装，open相关插件，基本可以解决报错。
+
 npm install -g open   (可能需要先提交open)
 
 ## Usage - 用法（用法。）
