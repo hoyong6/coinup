@@ -199,13 +199,17 @@ class RunImage {
       // console.log(`stdout----: ${data}`)
       // 需要关闭进程当前进程进入下一个进程
       if (data.indexOf('imgEnd') !== -1) {
-        console.log('--->当前子进程进程号', ls.pid);
-        process.kill(ls.pid, 'SIGINT'); // 获取子进程序列号，杀死子进程
-        ls.on('exit', function (code) {
-          console.log('监听到进程已关闭');
-          console.log('---->', '开始执行打包程序');
-          self.shellGulpBuild(self.project);
-        });
+        // todo 就是这行监听报了错误,控制业务层面的这个监听对象,为了安全性质考虑现在加入1秒定时器
+        window.clearTimeout(this.setTime);
+        this.setTime = setTimeout(() => {
+          console.log('--->当前子进程进程号', ls.pid);
+          process.kill(ls.pid, 'SIGINT'); // 获取子进程序列号，杀死子进程
+          ls.on('exit', function (code) {
+            console.log('监听到进程已关闭');
+            console.log('---->', '开始执行打包程序');
+            self.shellGulpBuild(self.project);
+          });
+        }, 1000);
       }
     });
   }
