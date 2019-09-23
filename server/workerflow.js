@@ -197,8 +197,10 @@ class Workerflow {
     ls.stdout.on('data', (data) => { // 子进程监听命令行输出的数据
       // console.log(`stdout----: ${data}`)
       // 需要关闭进程当前进程进入下一个进程
+      console.log('查看当前data输出情况--->', data)
       if (data.indexOf('serveEnd') !== -1) { // todo 就是这行监听报了错误,控制业务层面的这个监听对象,为了安全性质考虑现在加入1秒定时器
         clearTimeout(this.setTime)
+        console.log('代码是否进入到--->', '这里')
         this.setTime = setTimeout(() => {
           console.log('--->当前子进程进程号', ls.pid)
           process.kill(ls.pid, 'SIGINT') // 获取子进程序列号，杀死子进程
