@@ -9,7 +9,7 @@ const Router = require('koa-router')
 const servestatic = require('koa-static')
 const path = require('path')
 
-const Runimage = require('./runimage.js') // 引入脚本方法
+const Workerflow = require('./Workerflow.js') // 引入脚本方法
 const processurl = process.cwd() // 获取当前包运行的环境地址
 const main = async function (ctx, next) { // 渲染主页面
   ctx.response.type = 'html'
@@ -19,7 +19,7 @@ console.log('processurl---->', processurl)
 const home = servestatic(path.resolve(__dirname).split('/dist')[0] + '/public/') // 静态服务器
 app.use(home)
 let imageconfigData = ''
-const run = new Runimage()
+const run = new Workerflow()
 
 class Server {
   constructor () {

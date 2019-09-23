@@ -15,7 +15,7 @@ const emitter = new events.EventEmitter() // 创建事件监听模块
 const path = require('path')
 console.log('---->', path.resolve(__dirname).split('/dist')[0])
 // 读取文件函数
-class RunImage {
+class Workerflow {
   constructor () {
     this.urlConfig = ''
     this.coinName = ''
@@ -198,7 +198,7 @@ class RunImage {
       // console.log(`stdout----: ${data}`)
       // 需要关闭进程当前进程进入下一个进程
       if (data.indexOf('serveEnd') !== -1) { // todo 就是这行监听报了错误,控制业务层面的这个监听对象,为了安全性质考虑现在加入1秒定时器
-        window.clearTimeout(this.setTime)
+        clearTimeout(this.setTime)
         this.setTime = setTimeout(() => {
           console.log('--->当前子进程进程号', ls.pid)
           process.kill(ls.pid, 'SIGINT') // 获取子进程序列号，杀死子进程
@@ -251,5 +251,5 @@ class RunImage {
   }
 }
 
-module.exports = RunImage
-// new RunImage()
+module.exports = Workerflow
+// new Workerflow()

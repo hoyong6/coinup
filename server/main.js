@@ -2,7 +2,7 @@
 var program = require('commander')
 
 // 命令行模式直接执行脚本
-const Runimage = require('./runimage.js')
+const Workerflow = require('./Workerflow.js')
 
 const Server = require('./server.js')
 
@@ -21,7 +21,7 @@ if (program.initui) {
 
 if (program.run || program) {
   if (!program.initui) {
-    const b = new Runimage()
+    const b = new Workerflow()
     b.init() // 初始化
   }
 }

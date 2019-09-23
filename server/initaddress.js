@@ -26,7 +26,7 @@ function initaddress (callback, parameter) {
       console.log('success!')
       if (typeof callback === 'function') { // 配置成功进一步执行下一层回调函数
         console.log('地址配置成功')
-        callback(parameter) // 运行 runimages 里面读取配置函数
+        callback(parameter) // 运行 Workerflow 里面读取配置函数
       }
     } catch (err) {
       console.error(err)
